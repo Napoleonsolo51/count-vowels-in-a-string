@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Finding the vowels</title>
+<style>
+  body {
+  background-color: lightblue;
+}
+
+</style>
+<script>
+  var vowel = function(str) {
+  var matches = str.match(/[aeiou]/gi);
+  var count = matches ? matches.length: 0;
+
+  document.getElementById('p').innerHTML = "'"+str+"contains"+count+"vowel(s)";
+  return false;
+};
+
+</script>
+</head>
+<body>
+
+  <h1>Write in the box to get the number of vowels!</h1>
+  <form>
+    <input type= "text" name="t1">
+    <input type='submit' value="SUBMIT" onClick='return vowel(this.form.t1.value)'>
+  <div id="p"></div>
+</form>
+</body>
+</html>
